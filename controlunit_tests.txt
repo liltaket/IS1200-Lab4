@@ -1,0 +1,29 @@
+# IS1200 Lab 4 - Assignment 3 ControlUnit test vectors
+# Expected pins:
+# Input:  Instruction[32]
+# Outputs: RegWrite, ALUSrc, ALUControl[3], Branch
+#
+# Required behavior:
+# addi (opcode 0x13): RegWrite=1, ALUSrc=1, ALUControl=000, Branch=0
+# add  (opcode 0x33): RegWrite=1, ALUSrc=0, ALUControl=000, Branch=0
+# beq  (opcode 0x63): RegWrite=0, ALUSrc=0, ALUControl=001, Branch=1
+
+Instruction[32] RegWrite ALUSrc ALUControl[3] Branch
+
+# --- ADDI ---
+0x00000013 1 1 000 0
+0x00400293 1 1 000 0
+0x00228393 1 1 000 0
+0xFFF00093 1 1 000 0
+
+# --- ADD ---
+0x00000033 1 0 000 0
+0x005383B3 1 0 000 0
+0x001000B3 1 0 000 0
+0x006282B3 1 0 000 0
+
+# --- BEQ ---
+0x00000063 0 0 001 1
+0x00538663 0 0 001 1
+0x00000463 0 0 001 1
+0xFE000CE3 0 0 001 1
