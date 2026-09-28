@@ -1,11 +1,26 @@
-# IS1200 Lab 4: Processor
+# IS1200 Lab 4: RISC-V Processor
 
-Files collected for Lab 4:
+This repository contains the Lab 4 processor circuit, assignment instructions, and test-vector files.
 
-- `lab4-processor-design.pdf` — lab instructions.
-- `processor_riscv.circ` — Logisim Evolution processor circuit.
-- `alu_tests.txt` — Assignment 1 ALU test vectors.
-- `registerfile_tests_v2.txt` — Assignment 2 RegisterFile test vectors (Test 2; reported not working).
-- `controlunit_tests.txt` — Assignment 3 ControlUnit test vectors.
+## Repository layout
 
-Test 2 is marked as not working based on the author's report. The tests have not been independently run.
+```text
+circuits/
+  processor_riscv.circ
+
+docs/
+  lab4-processor-design.pdf
+
+tests/
+  alu_tests.txt
+  registerfile_tests_v2.txt
+  controlunit_tests.txt
+```
+
+## Test vectors
+
+- `tests/alu_tests.txt` — Assignment 1: ALU.
+- `tests/registerfile_tests_v2.txt` — Assignment 2: RegisterFile. This is Test 2 and is reported as not working; it has not been independently run.
+- `tests/controlunit_tests.txt` — Assignment 3: ControlUnit.
+
+The files include the expected input and output signal names, widths, and vector data for each assignment.
