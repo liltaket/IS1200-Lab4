@@ -17,6 +17,10 @@ tests/
   controlunit_tests.txt
   datapath_assignment4_testvector.txt
   datapath_assignment4_expected_trace.txt
+Assembly/
+  Övning 5/
+    factorial.s
+    factorial.txt
 ```
 
 ## Test vectors
@@ -26,5 +30,7 @@ tests/
 - `tests/controlunit_tests.txt` — Assignment 3: ControlUnit.
 - `tests/datapath_assignment4_testvector.txt` — Assignment 4: datapath integration. **Currently not working; unverified.**
 - `tests/datapath_assignment4_expected_trace.txt` — Expected trace for the Assignment 4 datapath integration test.
+- `Assembly/Övning 5/factorial.s` — Assignment 5 factorial assembly source.
+- `Assembly/Övning 5/factorial.txt` — RARS raw memory image for the factorial program.
 
 The files include the expected input and output signal names, widths, and vector data for each assignment.
