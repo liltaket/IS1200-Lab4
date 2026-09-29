@@ -7,7 +7,6 @@ This repository contains the Lab 4 processor circuit, assignment instructions, a
 ```text
 circuits/
   processor_riscv.circ
-  DENSENASTELAB4.circ
 
 docs/
   lab4-processor-design.pdf
