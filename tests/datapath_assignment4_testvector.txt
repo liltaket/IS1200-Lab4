@@ -1,0 +1,62 @@
+# IS1200 Lab 4 - Assignment 4 Datapath integration test
+#
+# TEMPORARY TEST SETUP:
+# 1) Disconnect the internal Logisim Clock from the processor clock net.
+# 2) Add a 1-bit INPUT pin named CLK_TEST and connect it to the same net that clocks
+#    both the PC register and RegisterFile.
+# 3) Add an 8-bit OUTPUT pin named PCdbg connected directly to PC.Q.
+# 4) Keep the required 32-bit output pin named t2.
+# 5) Load test.S into ROM exactly as listed below.
+#
+# ROM words:
+# 0: 00400293
+# 1: 00228393
+# 2: 005383b3
+# 3: 00538663
+# 4: ffd38393
+# 5: fe000ce3
+# 6: 00000033
+#
+# Expected PC sequence:
+# 00 -> 04 -> 08 -> 0C -> 10 -> 14 -> 0C -> 10 -> 14 -> 0C -> 18 -> 1C
+#
+# Expected t2 sequence at those states:
+#  0     0     6    10    10     7     7     7      4     4      4      4
+#
+# Each 0->1 transition of CLK_TEST is one rising clock edge.
+
+CLK_TEST PCdbg[8] t2[32] <set> <seq>
+
+0 0x00 0x00000000 1 1
+1 0x04 0x00000000 1 2
+0 0x04 0x00000000 1 3
+
+1 0x08 0x00000006 1 4
+0 0x08 0x00000006 1 5
+
+1 0x0C 0x0000000A 1 6
+0 0x0C 0x0000000A 1 7
+
+1 0x10 0x0000000A 1 8
+0 0x10 0x0000000A 1 9
+
+1 0x14 0x00000007 1 10
+0 0x14 0x00000007 1 11
+
+1 0x0C 0x00000007 1 12
+0 0x0C 0x00000007 1 13
+
+1 0x10 0x00000007 1 14
+0 0x10 0x00000007 1 15
+
+1 0x14 0x00000004 1 16
+0 0x14 0x00000004 1 17
+
+1 0x0C 0x00000004 1 18
+0 0x0C 0x00000004 1 19
+
+1 0x18 0x00000004 1 20
+0 0x18 0x00000004 1 21
+
+1 0x1C 0x00000004 1 22
+0 0x1C 0x00000004 1 23

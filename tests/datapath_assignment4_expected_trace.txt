@@ -1,0 +1,31 @@
+IS1200 Lab 4 - Assignment 4 expected integration trace
+
+ROM:
+  word 0 @ PC 0x00: 00400293   addi x5, x0, 4
+  word 1 @ PC 0x04: 00228393   addi x7, x5, 2
+  word 2 @ PC 0x08: 005383b3   add  x7, x7, x5
+  word 3 @ PC 0x0C: 00538663   beq  x7, x5, +12
+  word 4 @ PC 0x10: ffd38393   addi x7, x7, -3
+  word 5 @ PC 0x14: fe000ce3   beq  x0, x0, -8
+  word 6 @ PC 0x18: 00000033   add  x0, x0, x0
+
+Expected states BEFORE each instruction:
+PC    t2(dec)  What happens
+0x00    0      x5 <- 4
+0x04    0      x7 <- x5 + 2 = 6
+0x08    6      x7 <- x7 + x5 = 10
+0x0C   10      x7 != x5, branch NOT taken
+0x10   10      x7 <- x7 - 3 = 7
+0x14    7      x0 == x0, branch taken back to 0x0C
+0x0C    7      x7 != x5, branch NOT taken
+0x10    7      x7 <- x7 - 3 = 4
+0x14    4      x0 == x0, branch taken back to 0x0C
+0x0C    4      x7 == x5, branch taken forward to 0x18
+0x18    4      add x0,x0,x0; t2 unchanged
+0x1C    4      next address
+
+Expected PC trace in decimal:
+0, 4, 8, 12, 16, 20, 12, 16, 20, 12, 24, 28
+
+Expected PC trace in hex:
+00, 04, 08, 0C, 10, 14, 0C, 10, 14, 0C, 18, 1C

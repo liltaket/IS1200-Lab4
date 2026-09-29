@@ -15,6 +15,8 @@ tests/
   alu_tests.txt
   registerfile_tests_v2.txt
   controlunit_tests.txt
+  datapath_assignment4_testvector.txt
+  datapath_assignment4_expected_trace.txt
 ```
 
 ## Test vectors
@@ -22,5 +24,7 @@ tests/
 - `tests/alu_tests.txt` — Assignment 1: ALU.
 - `tests/registerfile_tests_v2.txt` — Assignment 2: RegisterFile. This is Test 2 and is reported as not working; it has not been independently run.
 - `tests/controlunit_tests.txt` — Assignment 3: ControlUnit.
+- `tests/datapath_assignment4_testvector.txt` — Assignment 4: datapath integration. **Currently not working; unverified.**
+- `tests/datapath_assignment4_expected_trace.txt` — Expected trace for the Assignment 4 datapath integration test.
 
 The files include the expected input and output signal names, widths, and vector data for each assignment.

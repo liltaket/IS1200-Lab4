@@ -322,9 +322,33 @@
     <a name="circuit" val="Datapath"/>
     <a name="clabelfont" val="SansSerif plain 12"/>
     <a name="simulationFrequency" val="32.0"/>
-    <comp lib="0" loc="(120,390)" name="Clock">
-      <a name="appearance" val="classic"/>
+    <comp lib="0" loc="(1060,820)" name="Tunnel">
       <a name="facing" val="south"/>
+      <a name="label" val="ALUC"/>
+      <a name="width" val="3"/>
+    </comp>
+    <comp lib="0" loc="(1140,880)" name="Tunnel">
+      <a name="label" val="AluOut"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(1160,910)" name="Tunnel">
+      <a name="label" val="Zero"/>
+    </comp>
+    <comp lib="0" loc="(1180,750)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="t2"/>
+      <a name="radix" val="10signed"/>
+      <a name="type" val="output"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(140,560)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="CLK"/>
+    </comp>
+    <comp lib="0" loc="(160,390)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="label" val="CLK"/>
     </comp>
     <comp lib="0" loc="(180,460)" name="Constant">
       <a name="value" val="0x4"/>
@@ -337,26 +361,233 @@
       <a name="value" val="0x2"/>
       <a name="width" val="3"/>
     </comp>
-    <comp lib="0" loc="(280,490)" name="Probe">
+    <comp lib="0" loc="(300,480)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="label" val="PC"/>
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="0" loc="(310,490)" name="Probe">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
+      <a name="radix" val="10unsigned"/>
     </comp>
-    <comp lib="0" loc="(640,580)" name="Probe">
+    <comp lib="0" loc="(360,800)" name="Splitter">
+      <a name="bit0" val="none"/>
+      <a name="bit1" val="none"/>
+      <a name="bit10" val="0"/>
+      <a name="bit11" val="0"/>
+      <a name="bit12" val="none"/>
+      <a name="bit13" val="none"/>
+      <a name="bit14" val="none"/>
+      <a name="bit15" val="none"/>
+      <a name="bit16" val="none"/>
+      <a name="bit17" val="none"/>
+      <a name="bit18" val="none"/>
+      <a name="bit19" val="none"/>
+      <a name="bit2" val="none"/>
+      <a name="bit20" val="none"/>
+      <a name="bit21" val="none"/>
+      <a name="bit22" val="none"/>
+      <a name="bit23" val="none"/>
+      <a name="bit24" val="none"/>
+      <a name="bit25" val="1"/>
+      <a name="bit26" val="1"/>
+      <a name="bit27" val="1"/>
+      <a name="bit28" val="none"/>
+      <a name="bit29" val="none"/>
+      <a name="bit3" val="none"/>
+      <a name="bit30" val="none"/>
+      <a name="bit31" val="none"/>
+      <a name="bit4" val="none"/>
+      <a name="bit5" val="none"/>
+      <a name="bit6" val="none"/>
+      <a name="bit7" val="none"/>
+      <a name="bit8" val="0"/>
+      <a name="bit9" val="0"/>
+      <a name="incoming" val="32"/>
+    </comp>
+    <comp lib="0" loc="(380,770)" name="Constant">
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(40,640)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="BR"/>
+    </comp>
+    <comp lib="0" loc="(440,760)" name="Splitter">
+      <a name="bit2" val="1"/>
+      <a name="bit3" val="1"/>
+      <a name="bit4" val="1"/>
+      <a name="bit5" val="2"/>
+      <a name="bit6" val="2"/>
+      <a name="bit7" val="2"/>
+      <a name="facing" val="west"/>
+      <a name="fanout" val="3"/>
+      <a name="incoming" val="8"/>
+    </comp>
+    <comp lib="0" loc="(460,730)" name="Probe">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
+      <a name="radix" val="16"/>
     </comp>
-    <comp lib="0" loc="(80,540)" name="Constant"/>
-    <comp lib="0" loc="(800,490)" name="Pin">
+    <comp lib="0" loc="(490,780)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="PC"/>
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="0" loc="(50,530)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="BROF"/>
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="0" loc="(530,740)" name="Constant">
+      <a name="facing" val="south"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(550,770)" name="Tunnel">
+      <a name="label" val="BROF"/>
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="0" loc="(610,740)" name="Splitter">
+      <a name="bit0" val="none"/>
+      <a name="bit1" val="none"/>
+      <a name="bit10" val="none"/>
+      <a name="bit11" val="none"/>
+      <a name="bit12" val="none"/>
+      <a name="bit13" val="none"/>
+      <a name="bit14" val="none"/>
+      <a name="bit15" val="0"/>
+      <a name="bit16" val="0"/>
+      <a name="bit17" val="0"/>
+      <a name="bit18" val="none"/>
+      <a name="bit19" val="none"/>
+      <a name="bit2" val="none"/>
+      <a name="bit20" val="1"/>
+      <a name="bit21" val="1"/>
+      <a name="bit22" val="1"/>
+      <a name="bit23" val="none"/>
+      <a name="bit24" val="none"/>
+      <a name="bit25" val="none"/>
+      <a name="bit26" val="none"/>
+      <a name="bit27" val="none"/>
+      <a name="bit28" val="none"/>
+      <a name="bit29" val="none"/>
+      <a name="bit3" val="none"/>
+      <a name="bit30" val="none"/>
+      <a name="bit31" val="none"/>
+      <a name="bit4" val="none"/>
+      <a name="bit5" val="none"/>
+      <a name="bit6" val="none"/>
+      <a name="bit7" val="2"/>
+      <a name="bit8" val="2"/>
+      <a name="bit9" val="2"/>
+      <a name="fanout" val="3"/>
+      <a name="incoming" val="32"/>
+      <a name="spacing" val="3"/>
+    </comp>
+    <comp lib="0" loc="(610,770)" name="Splitter">
+      <a name="bit0" val="none"/>
+      <a name="bit1" val="none"/>
+      <a name="bit10" val="none"/>
+      <a name="bit11" val="none"/>
+      <a name="bit12" val="none"/>
+      <a name="bit13" val="none"/>
+      <a name="bit14" val="none"/>
+      <a name="bit15" val="none"/>
+      <a name="bit16" val="none"/>
+      <a name="bit17" val="none"/>
+      <a name="bit18" val="none"/>
+      <a name="bit19" val="none"/>
+      <a name="bit2" val="none"/>
+      <a name="bit20" val="0"/>
+      <a name="bit21" val="0"/>
+      <a name="bit22" val="0"/>
+      <a name="bit23" val="0"/>
+      <a name="bit24" val="0"/>
+      <a name="bit25" val="0"/>
+      <a name="bit26" val="0"/>
+      <a name="bit27" val="0"/>
+      <a name="bit28" val="0"/>
+      <a name="bit29" val="0"/>
+      <a name="bit3" val="none"/>
+      <a name="bit30" val="0"/>
+      <a name="bit31" val="0"/>
+      <a name="bit4" val="none"/>
+      <a name="bit5" val="none"/>
+      <a name="bit6" val="none"/>
+      <a name="bit7" val="none"/>
+      <a name="bit8" val="none"/>
+      <a name="bit9" val="none"/>
+      <a name="fanout" val="1"/>
+      <a name="incoming" val="32"/>
+    </comp>
+    <comp lib="0" loc="(670,760)" name="Bit Extender">
+      <a name="in_width" val="12"/>
+      <a name="out_width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(690,760)" name="Tunnel">
+      <a name="label" val="ImmEx"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(70,390)" name="Clock">
       <a name="appearance" val="classic"/>
-      <a name="facing" val="west"/>
-      <a name="label" val="t2"/>
-      <a name="type" val="output"/>
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="0" loc="(750,800)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="AluOut"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(80,640)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="Zero"/>
+    </comp>
+    <comp lib="0" loc="(810,530)" name="Tunnel">
+      <a name="label" val="SRC"/>
+    </comp>
+    <comp lib="0" loc="(820,570)" name="Tunnel">
+      <a name="label" val="BR"/>
+    </comp>
+    <comp lib="0" loc="(820,630)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="label" val="CLK"/>
+    </comp>
+    <comp lib="0" loc="(860,860)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="R2"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(870,550)" name="Tunnel">
+      <a name="label" val="ALUC"/>
+      <a name="width" val="3"/>
+    </comp>
+    <comp lib="0" loc="(890,900)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="ImmEx"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(90,540)" name="Constant"/>
+    <comp lib="0" loc="(920,710)" name="Tunnel">
+      <a name="label" val="R2"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(960,920)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="SRC"/>
+    </comp>
+    <comp lib="1" loc="(60,560)" name="AND Gate">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="2" loc="(80,520)" name="Multiplexer">
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="2" loc="(980,880)" name="Multiplexer">
       <a name="width" val="32"/>
     </comp>
     <comp lib="3" loc="(260,470)" name="Adder"/>
     <comp lib="3" loc="(310,530)" name="Shifter">
       <a name="shift" val="lr"/>
     </comp>
+    <comp lib="3" loc="(540,770)" name="Adder"/>
     <comp lib="5" loc="(140,490)" name="Register">
       <a name="appearance" val="logisim_evolution"/>
       <a name="label" val="PC"/>
@@ -364,16 +595,26 @@
     <comp lib="5" loc="(360,520)" name="ROM">
       <a name="appearance" val="classic"/>
       <a name="contents">addr/data: 8 32
-400293 228393
+400293 228393 5383b3 538663 ffd38393 fe000ce3 33
 </a>
       <a name="dataWidth" val="32"/>
     </comp>
-    <comp loc="(270,730)" name="RegisterFile"/>
-    <comp loc="(410,780)" name="ALU"/>
-    <comp loc="(790,260)" name="ControlUnit"/>
-    <wire from="(120,390)" to="(120,560)"/>
-    <wire from="(120,560)" to="(140,560)"/>
+    <comp loc="(1000,440)" name="ControlUnit"/>
+    <comp loc="(1110,850)" name="ALU"/>
+    <comp loc="(890,690)" name="RegisterFile"/>
+    <wire from="(1010,670)" to="(1010,850)"/>
+    <wire from="(1010,850)" to="(1020,850)"/>
+    <wire from="(1060,820)" to="(1060,830)"/>
+    <wire from="(1110,880)" to="(1140,880)"/>
+    <wire from="(1110,890)" to="(1130,890)"/>
+    <wire from="(1130,890)" to="(1130,910)"/>
+    <wire from="(1130,910)" to="(1160,910)"/>
+    <wire from="(160,390)" to="(160,400)"/>
+    <wire from="(160,400)" to="(190,400)"/>
     <wire from="(180,460)" to="(220,460)"/>
+    <wire from="(20,350)" to="(20,510)"/>
+    <wire from="(20,350)" to="(270,350)"/>
+    <wire from="(20,510)" to="(50,510)"/>
     <wire from="(200,480)" to="(200,520)"/>
     <wire from="(200,480)" to="(220,480)"/>
     <wire from="(200,520)" to="(250,520)"/>
@@ -384,15 +625,63 @@
     <wire from="(250,500)" to="(270,500)"/>
     <wire from="(250,520)" to="(270,520)"/>
     <wire from="(260,470)" to="(270,470)"/>
-    <wire from="(270,340)" to="(270,470)"/>
+    <wire from="(270,350)" to="(270,470)"/>
     <wire from="(270,490)" to="(270,500)"/>
-    <wire from="(270,490)" to="(280,490)"/>
+    <wire from="(270,490)" to="(300,490)"/>
+    <wire from="(300,480)" to="(300,490)"/>
+    <wire from="(300,490)" to="(310,490)"/>
     <wire from="(310,530)" to="(360,530)"/>
-    <wire from="(600,580)" to="(640,580)"/>
-    <wire from="(80,540)" to="(140,540)"/>
-    <wire from="(90,340)" to="(270,340)"/>
-    <wire from="(90,340)" to="(90,520)"/>
-    <wire from="(90,520)" to="(140,520)"/>
+    <wire from="(360,710)" to="(360,800)"/>
+    <wire from="(360,710)" to="(610,710)"/>
+    <wire from="(360,800)" to="(360,880)"/>
+    <wire from="(380,770)" to="(420,770)"/>
+    <wire from="(380,780)" to="(420,780)"/>
+    <wire from="(380,790)" to="(420,790)"/>
+    <wire from="(40,610)" to="(40,640)"/>
+    <wire from="(440,760)" to="(450,760)"/>
+    <wire from="(450,730)" to="(450,760)"/>
+    <wire from="(450,730)" to="(460,730)"/>
+    <wire from="(450,760)" to="(500,760)"/>
+    <wire from="(490,780)" to="(500,780)"/>
+    <wire from="(520,740)" to="(520,750)"/>
+    <wire from="(520,740)" to="(530,740)"/>
+    <wire from="(540,770)" to="(550,770)"/>
+    <wire from="(60,540)" to="(60,560)"/>
+    <wire from="(600,580)" to="(610,580)"/>
+    <wire from="(610,580)" to="(610,710)"/>
+    <wire from="(610,580)" to="(630,580)"/>
+    <wire from="(610,710)" to="(610,740)"/>
+    <wire from="(610,740)" to="(610,770)"/>
+    <wire from="(630,510)" to="(630,580)"/>
+    <wire from="(630,510)" to="(710,510)"/>
+    <wire from="(630,670)" to="(790,670)"/>
+    <wire from="(630,700)" to="(790,700)"/>
+    <wire from="(630,730)" to="(790,730)"/>
+    <wire from="(670,760)" to="(690,760)"/>
+    <wire from="(70,390)" to="(70,400)"/>
+    <wire from="(70,400)" to="(160,400)"/>
+    <wire from="(750,800)" to="(770,800)"/>
+    <wire from="(770,760)" to="(770,800)"/>
+    <wire from="(770,760)" to="(790,760)"/>
+    <wire from="(80,520)" to="(140,520)"/>
+    <wire from="(80,610)" to="(80,640)"/>
+    <wire from="(810,510)" to="(860,510)"/>
+    <wire from="(810,550)" to="(870,550)"/>
+    <wire from="(810,570)" to="(820,570)"/>
+    <wire from="(820,630)" to="(820,640)"/>
+    <wire from="(860,510)" to="(860,640)"/>
+    <wire from="(860,860)" to="(900,860)"/>
+    <wire from="(890,670)" to="(1010,670)"/>
+    <wire from="(890,710)" to="(920,710)"/>
+    <wire from="(890,750)" to="(1180,750)"/>
+    <wire from="(890,900)" to="(900,900)"/>
+    <wire from="(90,540)" to="(140,540)"/>
+    <wire from="(900,860)" to="(900,870)"/>
+    <wire from="(900,870)" to="(950,870)"/>
+    <wire from="(900,890)" to="(900,900)"/>
+    <wire from="(900,890)" to="(950,890)"/>
+    <wire from="(960,900)" to="(960,920)"/>
+    <wire from="(980,880)" to="(1020,880)"/>
   </circuit>
   <circuit name="RegisterFile">
     <a name="appearance" val="custom"/>
